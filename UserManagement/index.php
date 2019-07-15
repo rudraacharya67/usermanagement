@@ -31,7 +31,7 @@ $result = mysqli_query($connection, $sql);
 				      <td><?php echo $row["email"] ?></td>
 				      <td><img src="./profile/<?php echo $row["photo"] ?>" style="width: 50px;height: 50px;"></td>
 				      <td><a href="/UserManagement/editUser.php/?id=<?php echo $row['id'];?>" class="btn btn-info">Edit</a></td>
-				      <td><a href="/UserManagement/deleteUser.php/?id=<?php echo $row['id'];?>" class="btn btn-danger">Delete</a></td>
+				      <td><a onClick="javascript: return confirm('Please confirm deletion');" href="/UserManagement/deleteUser.php/?id=<?php echo $row['id'];?>" class="btn btn-danger">Delete</a></td>
 				    </tr>
 				<?php } }?>
 		  </tbody>
